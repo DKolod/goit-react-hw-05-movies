@@ -1,0 +1,54 @@
+.DetailsWrap {
+    display: flex;
+    padding: 20px;
+    flex-direction: column;
+}
+
+.InnerWrap {
+    display: flex;
+
+}
+
+.ImageWrap {
+    margin-right: 30px;
+    margin-left: 30px;
+
+}
+
+.ImageDetails {
+    border-radius: 4px;
+}
+
+.InfoWrap {
+    padding: 20px;
+    background-color: #47504641;
+    border-radius: 4px;
+}
+
+.LincTitle {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.LinkWrap {
+    padding: 20px;
+    border-radius: 4px;
+    background-color: #0b0c0c;
+}
+
+.LinkWrap a {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 22px;
+    font-weight: 500;
+    margin-left: 25px;
+
+}
+
+.active {
+    color: #f55308;
+}
+
+.inactive {
+    color: #eff5ed;
+}
