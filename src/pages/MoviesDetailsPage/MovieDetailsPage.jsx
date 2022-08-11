@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useParams, Outlet, NavLink } from 'react-router-dom';
-import { getMovieDetails } from '../servise/Api';
+import { getMovieDetails } from '../../servise/Api';
 import css from './MovieDetailsPage.module.css';
 
 export default function MovieDetailsPage() {
@@ -24,7 +24,7 @@ export default function MovieDetailsPage() {
             <div className={css.ImageWrap}>
               <img
                 className={css.ImageDetails}
-                width="300"
+                width="230"
                 src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
                 alt={movie.original_title}
               />

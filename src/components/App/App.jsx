@@ -1,10 +1,15 @@
 import { Routes, Route } from 'react-router-dom';
 import { lazy, Suspense } from 'react';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Navigation = lazy(() => import('../Navigation/Navigation'));
-const Home = lazy(() => import('../../pages/HomePage.jsx'));
-const Movies = lazy(() => import('../../pages/MoviesPage'));
-const MovieDetailsPage = lazy(() => import('../../pages/MovieDetailsPage.jsx'));
+const Home = lazy(() => import('../../pages/HomePage/HomePage.jsx'));
+const Movies = lazy(() => import('../../pages/MoviesPage/MoviesPage'));
+const MovieDetailsPage = lazy(() =>
+  import('../../pages/MoviesDetailsPage/MovieDetailsPage.jsx')
+);
+
 const Loader = lazy(() => import('../Loader/Loader'));
 const Cast = lazy(() => import('../Cast/Cast'));
 const Reviews = lazy(() => import('../Reviews/Reviews'));
@@ -23,6 +28,7 @@ export const App = () => {
           </Route>
         </Routes>
       </Suspense>
+      <ToastContainer />
     </div>
   );
 };

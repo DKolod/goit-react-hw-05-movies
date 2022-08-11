@@ -4,3 +4,6 @@
     font-size: 28px;
     font-weight: 700;
 }
+.Main {
+    background: linear-gradient(to right, rgba(0, 0, 255, 0.192), pink);
+}

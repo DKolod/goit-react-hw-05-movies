@@ -21,7 +21,7 @@
 
 .InfoWrap {
     padding: 20px;
-    background-color: #47504641;
+    background: linear-gradient(to right, rgba(0, 0, 255, 0.397), pink);
     border-radius: 4px;
 }
 

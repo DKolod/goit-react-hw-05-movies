@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import { BiSearchAlt } from 'react-icons/bi';
-import { getSearchMovie } from '../servise/Api';
+import { getSearchMovie } from '../../servise/Api';
 import css from './MoviesPage.module.css';
 import { toast } from 'react-toastify';
 import MoviesList from 'components/MoviesList/MoviesList';
@@ -25,14 +25,14 @@ export default function Movies() {
     })();
   }, [query]);
 
-  const onHandleChange = event => {
-    setValue(event.target.value);
+  const onHandleChange = e => {
+    setValue(e.target.value);
   };
 
-  const onHandleSubmit = event => {
-    event.preventDefault();
+  const onHandleSubmit = e => {
+    e.preventDefault();
     if (value.trim() === '') {
-      toast.error('Enter a search value');
+      toast.error('Empty');
       return;
     }
     setSearchParams({ query: value });
@@ -41,7 +41,7 @@ export default function Movies() {
 
   return (
     <div>
-      <main>
+      <main className={css.Main}>
         <div className={css.Searchbar}>
           <form onSubmit={onHandleSubmit} className={css.SearchForm}>
             <input

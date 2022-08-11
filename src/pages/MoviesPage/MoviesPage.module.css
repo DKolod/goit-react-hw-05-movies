@@ -1,9 +1,10 @@
-Searchbar {
-    display: flex;
-    justify-content: center;
-    background-color: #e1eaeb
-     
+.Main {
+    background: linear-gradient(to right, rgba(0, 0, 255, 0.336), pink);
 }
+/* .Searchbar {
+   
+    background: linear-gradient(to right, rgba(0, 0, 255, 0.336), pink);
+} */
 
 .SearchForm {
     display: flex;

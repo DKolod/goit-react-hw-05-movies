@@ -1,3 +1,4 @@
+import photo from '../../IMG/photo.jpg';
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { getMovieCast } from '../../servise/Api';
@@ -6,7 +7,6 @@ import css from './Cast.module.css';
 export default function Cast() {
   const [cast, setCast] = useState();
   const { movieId } = useParams();
-  // const movieId = useOutletContext();
 
   useEffect(() => {
     getMovieCast(movieId).then(data => {
@@ -23,10 +23,10 @@ export default function Cast() {
               src={
                 profile_path
                   ? `https://image.tmdb.org/t/p/w500${profile_path}`
-                  : 'Ups'
+                  : photo
               }
               alt={name}
-              width="100"
+              width="150"
             />
             <p>{name}</p>
           </li>
